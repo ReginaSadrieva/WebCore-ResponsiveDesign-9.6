@@ -93,15 +93,20 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: path.join(__dirname, "dist"), // Updated from contentBase
-    compress: true,
-    port: 9000,
-    hot: true, // Enable Hot Module Replacement
-    watchFiles: {
-      paths: ["src/**/*"], // Watch for changes in source files
-    },
-    client: {
-      overlay: true, // Show errors and warnings in the browser
+     static: path.join(__dirname, "dist"),
+  compress: true,
+  port: 9000,
+  hot: true,
+  watchFiles: {
+    paths: ["src/**/*"],
+  },
+  client: {
+    overlay: true,
+  },
+  open: {
+    app: {
+      name: "msedge",
     },
   },
+},
 };
