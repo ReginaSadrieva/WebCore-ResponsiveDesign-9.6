@@ -1,0 +1,184 @@
+/* ================== HEADER ================== */
+.header {
+  background-color: white;
+  height: 88px;
+  display: flex;
+  align-items: center;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.header__left,
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* General rules for header */
+.header__menu-btn,
+.header__separator,
+.header__button-text {
+  display: none;
+}
+
+.header__separator {
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  margin: 0 8px;
+}
+
+.header__logo {
+  display: block;
+  height: 50.81px;
+  width: 96.55px;
+  margin-left: 4px;
+}
+
+.header__menu-btn,
+.header__icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu-btn img,
+.header__icon-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.header__icons {
+  display: flex;
+  gap: 16px;
+}
+
+/* ================== MEDIA QUERIES ================== */
+
+/* Hide all icon groups by default */
+.header__icons--mobile-only,
+.header__icons--tablet-only,
+.header__icons--desktop-only {
+  display: none;
+}
+
+/* Mobile (<767px) */
+@media (max-width: 767px) {
+  .header {
+    background-color: white;
+    border-bottom: 1px solid #41f6d7;
+  }
+
+  .header__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header__container {
+    padding: 12px;
+  }
+
+  .header__menu-btn,
+  .header__icon-btn {
+    padding: 6px;
+  }
+
+  .header__icons--mobile-only {
+    display: flex;
+    gap: 16px;
+  }
+
+  .header__separator--after-logo {
+    display: block;
+  }
+}
+
+/* Tablets (768px–1119px) */
+@media (min-width: 768px) and (max-width: 1119px) {
+  .header {
+    background-color: white;
+    border-bottom: 1px solid #41f6d7;
+  }
+
+  .header__container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .header__menu-btn,
+  .header__icon-btn {
+    padding: 8px;
+  }
+
+  .header__icons--tablet-only {
+    display: flex;
+    gap: 16px;
+  }
+
+  .header__separator--before-logo,
+  .header__separator--after-profile {
+    display: block;
+  }
+}
+
+/* Desktop (>=1120px) */
+@media (min-width: 1120px) {
+  .header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    left: 40px;
+  }
+
+  .header__container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .header__menu-btn,
+  .header__icon-btn {
+    padding: 10px;
+  }
+
+  .header__icons--desktop-only {
+    display: flex;
+    gap: 20px;
+  }
+
+  .header__separator {
+    display: none !important;
+  }
+
+  /* Hide Menu button and Logo on the Desktop */
+  .header__menu-btn,
+  .header__logo {
+    display: none !important;
+  }
+
+  /* Adding text to the icons for Desktop */
+  .header__icons--desktop-only .header__icon-btn::after {
+    content: attr(aria-label);
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1b1c21;
+  }
+
+  .header__icon-text {
+    margin-right: 8px;
+    font-size: 14px;
+    color: #000;
+    font-family: "TT Lakes", sans-serif;
+  }
+}

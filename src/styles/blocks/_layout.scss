@@ -1,0 +1,25 @@
+/* ================== LAYOUT ================== */
+.layout {
+  display: flex;
+  height: 100%;
+}
+
+.services {
+  flex: 1;
+  padding: 32px;
+}
+
+/* ================== MEDIA QUERIES ================== */
+/* Mobile (<767px) */
+@media (max-width: 767px) {
+  .layout {
+    display: block;
+  }
+}
+
+/* Tablets (768px–1119px) */
+@media (min-width: 768px) and (max-width: 1119px) {
+  .layout {
+    display: block;
+  }
+}

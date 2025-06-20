@@ -1,0 +1,136 @@
+/* ================== SIDE MENU ================== */
+.menu {
+  position: relative;
+  top: 0;
+  left: 0;
+  flex: 0 0 320px;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-shadow: 20px 0 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.menu--hidden {
+  display: none;
+}
+
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.menu__icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.menu__logo {
+  display: block;
+  height: 51px;
+  width: 97px;
+  margin-left: -20px;
+}
+
+.menu__nav {
+  flex-grow: 1;
+}
+
+.menu__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu__item {
+  font-size: 16px;
+  color: #1b1c21;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  font-family: inherit;
+}
+
+.menu__item--active {
+  animation: pulse 2s infinite;
+  color: #7e7e82;
+  position: relative;
+}
+
+.menu__item--active::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #41f6d7;
+}
+
+/* ================== SIDE MENU FOOTER ================== */
+.menu__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu__actions {
+  display: flex;
+  gap: 16px;
+}
+
+.menu__action {
+  background: #ff3e79;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__email {
+  font-size: 14px;
+  color: #1b1c21;
+  text-decoration: none;
+}
+
+.menu__phone {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1b1c21;
+}
+
+.menu__lang {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #7e7e82;
+}
+
+/* ================== MEDIA QUERIES ================== */
+/* Desktop (>=1120px) */
+@media (min-width: 1120px) {
+  .menu {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .menu--hidden {
+    display: flex !important;
+  }
+}
