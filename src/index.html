@@ -10,7 +10,7 @@
     <header class="header">
       <div class="header__container">
         <div class="header__left">
-          <button class="header__menu-btn">
+          <button class="header__menu-btn" aria-label="Открыть меню">
             <img src="icons/burger.png" alt="Меню" />
           </button>
 
@@ -68,112 +68,116 @@
       </div>
     </header>
     <div class="layout">
-<!-- Side menu -->
-<aside class="menu menu--hidden">
-      <div class="menu__header">
-        <button class="menu__icon menu__icon--close">
-          <img src="icons/close.png" alt="Закрыть" />
-        </button>
-        <div class="menu__logo">
-          <img
-            src="icons/Group.png"
-            alt="CPS logo"
-            class="menu__logo"
-          />
-        </div>
-        <button class="menu__icon menu__icon--search">
-          <img src="icons/search.png" alt="Поиск" />
-        </button>
-      </div>
-
-      <nav class="menu__nav">
-        <div class="menu__list">
-          <button class="menu__item menu__item--active">Ремонт техники</button>
-          <button class="menu__item">Услуги и сервисы</button>
-          <button class="menu__item">Корпоративным клиентам</button>
-          <button class="menu__item">Продавцам техники</button>
-          <button class="menu__item">Партнерам</button>
-          <button class="menu__item">Производителям</button>
-          <button class="menu__item">Наши сервисные центры</button>
-          <button class="menu__item">Контакты</button>
-        </div>
-      </nav>
-
-      <div class="menu__footer">
-        <div class="menu__actions">
-          <button class="menu__action">
-            <img src="icons/call.png" alt="Позвонить" />
+      <!-- Side menu -->
+      <aside class="menu menu--hidden">
+        <div class="menu__header">
+          <button
+            class="menu__icon menu__icon--close"
+            aria-label="Закрыть меню"
+          >
+            <img src="icons/close.png" alt="Закрыть" />
           </button>
-          <button class="menu__action">
-            <img src="icons/chat.png" alt="Чат" />
-          </button>
-          <button class="menu__action">
-            <img src="icons/profile.png" alt="Профиль" />
+          <div class="menu__logo">
+            <img src="icons/Group.png" alt="CPS logo" class="menu__logo" />
+          </div>
+          <button class="menu__icon menu__icon--search" aria-label="Поиск">
+            <img src="icons/search.png" alt="Поиск" />
           </button>
         </div>
-        <a href="mailto:mail@cps.com" class="menu__email">mail@cps.com</a>
-        <div class="menu__phone">8 800 890 8900</div>
-        <div class="menu__lang">
-          <span class="menu__lang-item menu__lang-item--active">RU</span>
-          <span class="menu__lang-item">EN</span>
-          <span class="menu__lang-item">CH</span>
+
+        <nav class="menu__nav">
+          <div class="menu__list">
+            <button class="menu__item menu__item--active">
+              Ремонт техники
+            </button>
+            <button class="menu__item">Услуги и сервисы</button>
+            <button class="menu__item">Корпоративным клиентам</button>
+            <button class="menu__item">Продавцам техники</button>
+            <button class="menu__item">Партнерам</button>
+            <button class="menu__item">Производителям</button>
+            <button class="menu__item">Наши сервисные центры</button>
+            <button class="menu__item">Контакты</button>
+          </div>
+        </nav>
+
+        <div class="menu__footer">
+          <div class="menu__actions">
+            <button class="menu__action">
+              <img src="icons/call.png" alt="Позвонить" />
+            </button>
+            <button class="menu__action">
+              <img src="icons/chat.png" alt="Чат" />
+            </button>
+            <button class="menu__action">
+              <img src="icons/profile.png" alt="Профиль" />
+            </button>
+          </div>
+          <a href="mailto:mail@cps.com" class="menu__email">mail@cps.com</a>
+          <div class="menu__phone">8 800 890 8900</div>
+          <div class="menu__lang">
+            <span class="menu__lang-item menu__lang-item--active">RU</span>
+            <span class="menu__lang-item">EN</span>
+            <span class="menu__lang-item">CH</span>
+          </div>
         </div>
-      </div>
-    </aside>
+      </aside>
 
-    <main class="services">
-      <h1 class="services__title">Услуги и сервисы</h1>
+      <!-- Overlay for Desktop -->
+      <div class="overlay"></div>
 
-      <nav class="services__menu menu-scroll">
-        <button class="menu-scroll__item menu-scroll__item--active">
-          Ремонтируемые устройства
-        </button>
-        <button class="menu-scroll__item">Дополнительные услуги</button>
-        <button class="menu-scroll__item">Цены на услуги</button>
-        <button class="menu-scroll__item">Адреса сервисных центров</button>
-        <button class="menu-scroll__item">Специальные цены</button>
-        <button class="menu-scroll__item">Отзывы</button>
-      </nav>
+      <main class="services">
+        <h1 class="services__title">Услуги и сервисы</h1>
 
-      <section class="services__content">
-        <section class="services__desc">
-          <p class="services__text">
-            <span class="text--mobile">
-              Мы являемся авторизованным сервисным центром по ремонту техники
-              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-              официальной гарантией производителя.
-              <br /><br />
-            </span>
-            <span class="text--tablet">
-              Мы успешно работаем с 1992 года и заслужили репутацию надежного
-              партнёра.
-            </span>
-            <span class="text--desktop">
-              Что подтверждает большое количество постоянных клиентов. Мы
-              гордимся тем, что к нам обращаются по рекомендациям и, в свою
-              очередь, советуют нас родным и близким.
-            </span>
-          </p>
+        <nav class="services__menu menu-scroll">
+          <button class="menu-scroll__item menu-scroll__item--active">
+            Ремонтируемые устройства
+          </button>
+          <button class="menu-scroll__item">Дополнительные услуги</button>
+          <button class="menu-scroll__item">Цены на услуги</button>
+          <button class="menu-scroll__item">Адреса сервисных центров</button>
+          <button class="menu-scroll__item">Специальные цены</button>
+          <button class="menu-scroll__item">Отзывы</button>
+        </nav>
 
-          <a href="#" class="services__link">
+        <section class="services__content">
+          <section class="services__desc">
+            <p class="services__text">
+              <span class="text--mobile">
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
+                <br /><br />
+              </span>
+              <span class="text--tablet">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнёра.
+              </span>
+              <span class="text--desktop">
+                Что подтверждает большое количество постоянных клиентов. Мы
+                гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                очередь, советуют нас родным и близким.
+              </span>
+            </p>
+
+            <a href="#" class="services__link">
+              <img
+                src="icons/expand.png"
+                alt="Читать далее"
+                class="services__link-icon"
+              />
+              Читать далее
+            </a>
+          </section>
+
+          <section class="services__image-block">
             <img
-              src="icons/expand.png"
-              alt="Читать далее"
-              class="services__link-icon"
+              src="images/banner.png"
+              alt="Табличка CPS"
+              class="services__image"
             />
-            Читать далее
-          </a>
+          </section>
         </section>
-
-        <section class="services__image-block">
-          <img
-            src="images/banner.png"
-            alt="Табличка CPS"
-            class="services__image"
-          />
-        </section>
-      </section>
-    </main>
+      </main>
     </div>
   </body>
 </html>
