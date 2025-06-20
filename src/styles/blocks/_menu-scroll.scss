@@ -18,9 +18,9 @@
   flex-shrink: 0;
   padding: 10px 18px;
   min-height: 36px;
-  border: 2px solid #b8ffec;
+  border: 2px solid $color-light-green;
   border-radius: 4px;
-  background-color: #f8f8f8;
+  background-color: $color-header-bg;
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
@@ -30,11 +30,11 @@
   justify-content: center;
   transition: background-color 0.3s ease, transform 0.2s ease,
     box-shadow 0.3s ease;
-  font-family: "TT Lakes", sans-serif;
+  font-family: $font-main;
 }
 
 .menu-scroll__item:hover {
-  background-color: #e0fff6;
+  background-color: $color-scroll-hover;
 }
 
 .menu-scroll__item:active {
@@ -44,12 +44,12 @@
 
 .menu-scroll__item:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #b8ffec;
+  box-shadow: 0 0 0 2px $color-light-green;
 }
 
 .menu-scroll__item--active {
-  background-color: #ffffff;
-  border-color: #41f6d7;
+  background-color: $color-active-hover;
+  border-color: $color-light-green;
 }
 
 /* ================== MEDIA QUERIES ================== */
@@ -63,7 +63,7 @@
 
 /* Tablets (768px–1119px) */
 @media (min-width: 768px) and (max-width: 1119px) {
-   .menu-scroll {
+  .menu-scroll {
     gap: 16px;
   }
 
@@ -72,9 +72,9 @@
   }
 }
 
- /* Desktop (>=1120px) */
- @media (min-width: 1120px) {
-   .menu-scroll {
+/* Desktop (>=1120px) */
+@media (min-width: 1120px) {
+  .menu-scroll {
     overflow-x: unset;
     flex-wrap: wrap;
     gap: 12px 24px;

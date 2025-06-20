@@ -1,3 +1,4 @@
+@use './blocks/variables' as *;
 @use './blocks/fonts';
 @use './blocks/header';
 @use './blocks/layout';
@@ -6,6 +7,5 @@
 @use './blocks/menu';
 @use './blocks/reset';
 @use './blocks/services';
-@use './blocks/variables';
 
 

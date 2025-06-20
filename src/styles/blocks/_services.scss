@@ -4,7 +4,7 @@
   font-weight: 700;
   margin: 24px 0 16px;
   padding-left: 12px;
-  border-left: 4px solid #41f6d7;
+  border-left: 4px solid $color-light-green;
 }
 
 .services__desc {
@@ -23,13 +23,13 @@
   align-items: center;
   margin-top: 12px;
   font-weight: 600;
-  color: #1b1c21;
+  color: $color-text;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .services__link:hover {
-  color: #41f6d7;
+  color: $color-light-green;
 }
 
 .services__link-icon {

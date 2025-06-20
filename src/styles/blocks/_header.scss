@@ -1,6 +1,6 @@
 /* ================== HEADER ================== */
 .header {
-  background-color: white;
+  background-color: $color-header-bg;
   height: 88px;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@
 .header__separator {
   width: 2px;
   height: 32px;
-  background-color: #eaeaea;
+  background-color: $color-light-grey;
   margin: 0 8px;
 }
 
@@ -75,8 +75,8 @@
 /* Mobile (<767px) */
 @media (max-width: 767px) {
   .header {
-    background-color: white;
-    border-bottom: 1px solid #41f6d7;
+    background-color: $color-header-bg;
+    border-bottom: 1px solid $color-light-green;
   }
 
   .header__container {
@@ -106,8 +106,8 @@
 /* Tablets (768px–1119px) */
 @media (min-width: 768px) and (max-width: 1119px) {
   .header {
-    background-color: white;
-    border-bottom: 1px solid #41f6d7;
+    background-color: $color-header-bg;
+    border-bottom: 1px solid $color-light-green;
   }
 
   .header__container {
@@ -172,13 +172,13 @@
     margin-left: 8px;
     font-size: 14px;
     font-weight: 500;
-    color: #1b1c21;
+    color: $color-text;
   }
 
   .header__icon-text {
     margin-right: 8px;
     font-size: 14px;
-    color: #000;
-    font-family: "TT Lakes", sans-serif;
+    color: $color-black;
+    font-family: $font-main;
   }
 }
