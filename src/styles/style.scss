@@ -1,11 +1,20 @@
-@use './blocks/variables' as *;
-@use './blocks/fonts';
-@use './blocks/header';
-@use './blocks/layout';
-@use './blocks/media';
-@use './blocks/menu-scroll';
-@use './blocks/menu';
-@use './blocks/reset';
-@use './blocks/services';
+// @use './blocks/variables' as *;
+// @use './blocks/fonts';
+// @use './blocks/header';
+// @use './blocks/layout';
+// @use './blocks/media';
+// @use './blocks/menu-scroll';
+// @use './blocks/menu';
+// @use './blocks/reset';
+// @use './blocks/services';
 
 
+@import './blocks/variables';
+@import './blocks/fonts';
+@import './blocks/header';
+@import './blocks/layout';
+@import './blocks/media';
+@import './blocks/menu-scroll';
+@import './blocks/menu';
+@import './blocks/reset';
+@import './blocks/services';
