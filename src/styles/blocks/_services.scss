@@ -5,16 +5,17 @@
   margin: 24px 0 16px;
   padding-left: 12px;
   border-left: 4px solid $color-light-green;
-}
 
-.services__desc {
+
+&__desc {
   margin: 24px 0;
   padding: 0 16px;
 }
 
-.services__text {
+&__text {
   font-size: 14px;
   line-height: 1.4;
+}
 }
 
 /* ================== "Читать далее" BUTTON ================== */
@@ -26,26 +27,27 @@
   color: $color-text;
   text-decoration: none;
   transition: color 0.2s ease;
-}
 
-.services__link:hover {
+
+&__link:hover {
   color: $color-light-green;
 }
 
-.services__link-icon {
+&__link-icon {
   width: 24px;
   height: 24px;
   margin-right: 8px;
+}
 }
 
 /* ================== IMAGE BLOCK ================== */
 .services__image-block {
   margin-bottom: 32px;
-}
 
-.services__image {
+&__image {
   object-fit: cover;
   border-radius: 0;
+}
 }
 
 /* ================== MEDIA QUERIES ================== */
@@ -54,7 +56,6 @@
   .services__desc {
     font-size: 13px;
   }
-
   .services__image-block {
     margin: 0 -16px 24px -16px;
     //flex: 0 0 360px;

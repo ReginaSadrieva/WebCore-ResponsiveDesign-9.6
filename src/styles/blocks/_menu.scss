@@ -13,20 +13,19 @@
   box-shadow: 20px 0 30px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: none;
-}
 
 .menu--hidden {
   display: none;
 }
 
-.menu__header {
+&__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
 }
 
-.menu__icon {
+&__icon {
   background: none;
   border: none;
   cursor: pointer;
@@ -34,25 +33,25 @@
   width: 40px;
 }
 
-.menu__logo {
+&__logo {
   display: block;
   height: 51px;
   width: 97px;
   margin-left: -20px;
 }
 
-.menu__nav {
+&__nav {
   flex-grow: 1;
 }
 
-.menu__list {
+&__list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.menu__item {
+&__item {
   font-size: 16px;
   color: $color-text;
   cursor: pointer;
@@ -63,13 +62,13 @@
   font-family: inherit;
 }
 
-.menu__item--active {
+&__item--active {
   animation: pulse 2s infinite;
   color: $color-gray;
   position: relative;
 }
 
-.menu__item--active::before {
+&__item--active::before {
   content: "";
   position: absolute;
   left: -24px;
@@ -77,6 +76,7 @@
   bottom: 0;
   width: 4px;
   background-color: $color-light-green;
+}
 }
 
 /* ================== SIDE MENU FOOTER ================== */

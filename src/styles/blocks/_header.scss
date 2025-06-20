@@ -4,63 +4,63 @@
   height: 88px;
   display: flex;
   align-items: center;
-}
 
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 16px 0;
-}
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0;
+  }
 
-.header__left,
-.header__right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
 
-/* General rules for header */
-.header__menu-btn,
-.header__separator,
-.header__button-text {
-  display: none;
-}
+  /* General rules for header */
+  &__menu-btn,
+  &__separator,
+  &__button-text {
+    display: none;
+  }
 
-.header__separator {
-  width: 2px;
-  height: 32px;
-  background-color: $color-light-grey;
-  margin: 0 8px;
-}
+  &__separator {
+    width: 2px;
+    height: 32px;
+    background-color: $color-light-grey;
+    margin: 0 8px;
+  }
 
-.header__logo {
-  display: block;
-  height: 50.81px;
-  width: 96.55px;
-  margin-left: 4px;
-}
+  &__logo {
+    display: block;
+    height: 50.81px;
+    width: 96.55px;
+    margin-left: 4px;
+  }
 
-.header__menu-btn,
-.header__icon-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
+  &__menu-btn,
+  &__icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
 
-.header__menu-btn img,
-.header__icon-btn img {
-  width: 40px;
-  height: 40px;
-}
+  &__menu-btn img,
+  &__icon-btn img {
+    width: 40px;
+    height: 40px;
+  }
 
-.header__icons {
-  display: flex;
-  gap: 16px;
+  &__icons {
+    display: flex;
+    gap: 16px;
+  }
 }
 
 /* ================== MEDIA QUERIES ================== */
@@ -77,29 +77,29 @@
   .header {
     background-color: $color-active-hover;
     border-bottom: 1px solid $color-light-green;
-  }
 
-  .header__container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+    &__container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
 
-  .header__container {
-    padding: 12px;
-  }
+    &__container {
+      padding: 12px;
+    }
 
-  .header__menu-btn,
-  .header__icon-btn {
-    padding: 6px;
-  }
+    &__menu-btn,
+    &__icon-btn {
+      padding: 6px;
+    }
 
-  .header__icons--mobile-only {
-    display: flex;
-    gap: 16px;
-  }
+    &__icons--mobile-only {
+      display: flex;
+      gap: 16px;
+    }
 
-  .header__separator--after-logo {
-    display: block;
+    &__separator--after-logo {
+      display: block;
+    }
   }
 }
 
@@ -108,26 +108,26 @@
   .header {
     background-color: $color-active-hover;
     border-bottom: 1px solid $color-light-green;
-  }
 
-  .header__container {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+    &__container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
 
-  .header__menu-btn,
-  .header__icon-btn {
-    padding: 8px;
-  }
+    &__menu-btn,
+    &__icon-btn {
+      padding: 8px;
+    }
 
-  .header__icons--tablet-only {
-    display: flex;
-    gap: 16px;
-  }
+    &__icons--tablet-only {
+      display: flex;
+      gap: 16px;
+    }
 
-  .header__separator--before-logo,
-  .header__separator--after-profile {
-    display: block;
+    &__separator--before-logo,
+    &__separator--after-profile {
+      display: block;
+    }
   }
 }
 
@@ -139,46 +139,46 @@
     top: 0;
     right: 40px;
     left: 40px;
-  }
 
-  .header__container {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+    &__container {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
 
-  .header__menu-btn,
-  .header__icon-btn {
-    padding: 10px;
-  }
+    &__menu-btn,
+    .header__icon-btn {
+      padding: 10px;
+    }
 
-  .header__icons--desktop-only {
-    display: flex;
-    gap: 20px;
-  }
+    &__icons--desktop-only {
+      display: flex;
+      gap: 20px;
+    }
 
-  .header__separator {
-    display: none !important;
-  }
+    &__separator {
+      display: none !important;
+    }
 
-  /* Hide Menu button and Logo on the Desktop */
-  .header__menu-btn,
-  .header__logo {
-    display: none !important;
-  }
+    /* Hide Menu button and Logo on the Desktop */
+    &__menu-btn,
+    &__logo {
+      display: none !important;
+    }
 
-  /* Adding text to the icons for Desktop */
-  .header__icons--desktop-only .header__icon-btn::after {
-    content: attr(aria-label);
-    margin-left: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    color: $color-text;
-  }
+    /* Adding text to the icons for Desktop */
+    &__icons--desktop-only .header__icon-btn::after {
+      content: attr(aria-label);
+      margin-left: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $color-text;
+    }
 
-  .header__icon-text {
-    margin-right: 8px;
-    font-size: 14px;
-    color: $color-black;
-    font-family: $font-main;
+    &__icon-text {
+      margin-right: 8px;
+      font-size: 14px;
+      color: $color-black;
+      font-family: $font-main;
+    }
   }
 }
