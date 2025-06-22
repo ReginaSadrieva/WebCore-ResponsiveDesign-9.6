@@ -6,11 +6,12 @@
 
 .services {
   flex: 1;
-  padding: 32px;
+  //padding: 5px;
 }
 
 .services_brands {
-  padding: 16px;
+ padding: 16px 0px;
+
 }
 
 /* ================== MEDIA QUERIES ================== */
@@ -26,4 +27,11 @@
   .layout {
     display: block;
   }
+}
+
+/* Desktop (>=1120px) */
+@media (min-width: 1120px) {
+ .layout {
+  margin-left:260px;
+ }
 }

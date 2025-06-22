@@ -137,7 +137,7 @@
     background-color: transparent;
     position: absolute;
     top: 0;
-    right: 40px;
+    right: -30px;
     left: 40px;
 
     &__container {
@@ -177,7 +177,7 @@
     &__icon-text {
       margin-right: 8px;
       font-size: 14px;
-      color: $color-black;
+      color: $color-text;
       font-family: $font-main;
     }
   }

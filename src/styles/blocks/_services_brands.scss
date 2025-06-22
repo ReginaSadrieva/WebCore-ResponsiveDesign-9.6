@@ -1,48 +1,51 @@
 .services_brands {
+  &__header {
+    background: linear-gradient(
+      to right,
+      $color-header-bg,
+      $color-active-hover
+    );
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-&__header {
-  background: linear-gradient(to right, $color-header-bg, $color-active-hover);
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-gray;
+    padding: 0 16px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
 
-&__title {
-  font-size: 16px;
-  font-weight: 400;
-  color: $color-gray;
-  padding: 0 16px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  height: 80px;
-  text-transform: uppercase;
-  box-sizing: border-box;
-  width: 100%;
-  position: relative;
-}
+  &__title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $color-light-green;
+  }
 
-&__title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
-  background-color: $color-light-green;
-}
-
-&__item {
-  border-radius: 8px;
-  height: 72px;
-  width: 224px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
+  &__item {
+    border-radius: 8px;
+    height: 72px;
+    width: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
 }
 /* ================== MEDIA QUERIES ================== */
 
