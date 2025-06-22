@@ -2,8 +2,8 @@
   &__header {
     background: linear-gradient(
       to right,
-      $color-header-bg,
-      $color-active-hover
+      $color-off-white,
+      $color-pure-white
     );
     width: 100%;
     margin: 0;
@@ -13,7 +13,7 @@
   &__title {
     font-size: 16px;
     font-weight: 400;
-    color: $color-gray;
+    color: $color-medium-gray;
     padding: 0 16px;
     margin: 0;
     display: flex;
@@ -32,7 +32,7 @@
     left: 0;
     height: 1px;
     width: 100%;
-    background-color: $color-light-green;
+    background-color: $color-aqua-green;
   }
 
   &__item {
@@ -170,8 +170,8 @@
 .services_brands__brand {
   width: 240px;
   height: 72px;
-  background-color: $color-active-hover;
-  border: 1px solid $color-light-grey;
+  background-color: $color-pure-white;
+  border: 1px solid $color-pale-gray;
   border-radius: 8px;
   display: flex;
   align-items: center;

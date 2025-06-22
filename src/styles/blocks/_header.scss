@@ -1,6 +1,6 @@
 /* ================== HEADER ================== */
 .header {
-  background-color: $color-header-bg;
+  background-color: $color-off-white;
   height: 88px;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@
   &__separator {
     width: 2px;
     height: 32px;
-    background-color: $color-light-grey;
+    background-color: $color-pale-gray;
     margin: 0 8px;
   }
 
@@ -75,8 +75,8 @@
 /* Mobile (<767px) */
 @media (max-width: 767px) {
   .header {
-    background-color: $color-active-hover;
-    border-bottom: 1px solid $color-light-green;
+    background-color: $color-pure-white;
+    border-bottom: 1px solid $color-aqua-green;
 
     &__container {
       padding-left: 16px;
@@ -106,8 +106,8 @@
 /* Tablets (768px–1119px) */
 @media (min-width: 768px) and (max-width: 1119px) {
   .header {
-    background-color: $color-active-hover;
-    border-bottom: 1px solid $color-light-green;
+    background-color: $color-pure-white;
+    border-bottom: 1px solid $color-aqua-green;
 
     &__container {
       padding-left: 24px;
@@ -137,7 +137,7 @@
     background-color: transparent;
     position: absolute;
     top: 0;
-    right: -30px;
+    right: 0;
     left: 40px;
 
     &__container {
@@ -171,13 +171,13 @@
       margin-left: 8px;
       font-size: 14px;
       font-weight: 500;
-      color: $color-text;
+      color: $color-dark-charcoal;
     }
 
     &__icon-text {
       margin-right: 8px;
       font-size: 14px;
-      color: $color-text;
+      color: $color-dark-charcoal;
       font-family: $font-main;
     }
   }

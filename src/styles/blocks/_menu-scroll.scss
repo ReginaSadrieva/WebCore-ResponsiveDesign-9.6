@@ -17,9 +17,9 @@
     flex-shrink: 0;
     padding: 10px 18px;
     min-height: 36px;
-    border: 2px solid $color-light-green;
+    border: 2px solid $color-aqua-green;
     border-radius: 4px;
-    background-color: $color-header-bg;
+    background-color: $color-off-white;
     font-size: 14px;
     font-weight: 500;
     white-space: nowrap;
@@ -33,7 +33,7 @@
   }
 
   &__item:hover {
-    background-color: $color-scroll-hover;
+    background-color: $color-mint-white;
   }
 
   &__item:active {
@@ -43,12 +43,12 @@
 
   &__item:focus {
     outline: none;
-    box-shadow: 0 0 0 2px $color-light-green;
+    box-shadow: 0 0 0 2px $color-aqua-green;
   }
 
   &__item--active {
-    background-color: $color-active-hover;
-    border-color: $color-light-green;
+    background-color: $color-pure-white;
+    border-color: $color-aqua-green;
   }
 }
 

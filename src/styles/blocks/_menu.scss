@@ -7,7 +7,7 @@
   flex: 0 0 320px;
   min-height: 100vh;
   //height: 100%;
-  background-color: $color-active-hover;
+  background-color: $color-pure-white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -68,7 +68,7 @@
 
   &__item {
     font-size: 16px;
-    color: $color-text;
+    color: $color-dark-charcoal;
     cursor: pointer;
     background: none;
     border: none;
@@ -79,7 +79,7 @@
 
   &__item--active {
     animation: pulse 2s infinite;
-    color: $color-gray;
+    color: $color-medium-gray;
     position: relative;
   }
 
@@ -90,7 +90,7 @@
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: $color-light-green;
+    background-color: $color-aqua-green;
   }
 }
 
@@ -107,7 +107,7 @@
 }
 
 .menu__action {
-  background: $color-pink;
+  background: $color-vivid-pink;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -120,21 +120,21 @@
 
 .menu__email {
   font-size: 14px;
-  color: $color-text;
+  color: $color-dark-charcoal;
   text-decoration: none;
 }
 
 .menu__phone {
   font-size: 24px;
   font-weight: bold;
-  color: $color-text;
+  color: $color-dark-charcoal;
 }
 
 .menu__lang {
   display: flex;
   gap: 8px;
   font-size: 12px;
-  color: $color-gray;
+  color: $color-medium-gray;
 }
 /* ================== OVERLAY ================== */
 .overlay {

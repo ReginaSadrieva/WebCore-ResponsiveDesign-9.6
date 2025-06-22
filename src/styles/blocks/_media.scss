@@ -1,3 +1,11 @@
+.text {
+  &--mobile,
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
 /* ================== MEDIA QUERIES ================== */
 /* Mobile (<767px) */
 @media (max-width: 767px) {

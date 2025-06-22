@@ -4,7 +4,7 @@
   font-weight: 700;
   margin: 24px 0 16px;
   padding-left: 12px;
-  border-left: 4px solid $color-light-green;
+  border-left: 4px solid $color-aqua-green;
 
 
 &__desc {
@@ -27,14 +27,15 @@
   display: inline-flex;
   align-items: center;
   margin-top: 12px;
-  font-weight: 600;
-  color: $color-text;
+  font-weight: 500;
+  color: $color-dark-charcoal;
   text-decoration: none;
   transition: color 0.2s ease;
+  padding-left: 32px;
 
 
 &__link:hover {
-  color: $color-light-green;
+  color: $color-aqua-green;
 }
 
 &__link-icon {
@@ -58,7 +59,7 @@
 /* Mobile (<767px) */
 @media (max-width: 767px) {
   .services__desc {
-    font-size: 13px;
+    font-size: 16px;
   }
   .services__image-block {
     margin: 0 -16px 24px -16px;
