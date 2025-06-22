@@ -1,4 +1,4 @@
-.services_brands {
+.services_types {
   &__header {
     background: linear-gradient(to right, $color-off-white, $color-pure-white);
     width: 100%;
@@ -33,8 +33,8 @@
 
   &__item {
     border-radius: 8px;
-    height: 72px;
-    width: 224px;
+    height: 160px;
+    width: 240px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,24 +43,46 @@
     box-shadow: none;
   }
 
-  .services_brands__container {
+  &__container {
     padding: 24px 16px;
   }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
 }
+/* ================== TYPES ITEM ================== */
+
+.services_types__item {
+  width: 240px;
+  height: 160px;
+  background-color: $color-pure-white;
+  border: 1px solid $color-pale-gray;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 /* ================== MEDIA QUERIES ================== */
 
 /* Mobile (<767px) */
 @media (max-width: 767px) {
-  .services_brands__title {
+  .services_types__title {
     height: 80px;
   }
 
-  .services_brands__list {
+  .services_types__list {
     overflow: hidden;
     position: relative;
   }
 
-  .services_brands__items {
+  .services_types__items {
     display: flex;
     flex-wrap: nowrap;
     overflow: visible;
@@ -69,11 +91,11 @@
     max-height: none;
   }
 
-  .services_brands__item {
+  .services_types__item {
     flex: 0 0 240px;
   }
 
-  .services_brands__toggle {
+  .services_types__toggle {
     display: none;
   }
 
@@ -87,11 +109,11 @@
 
 /* Tablets (768px–1119px) */
 @media (min-width: 768px) and (max-width: 1119px) {
-  .services_brands__title {
+  .services_types__title {
     height: 56px;
   }
 
-  .services_brands__items {
+  .services_types__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
@@ -100,11 +122,11 @@
     transition: max-height 0.3s ease;
   }
 
-  .services_brands__items--expanded {
+  .services_types__items--expanded {
     max-height: none;
   }
 
-  .services_brands__toggle {
+  .services_types__toggle {
     display: flex;
     margin-top: 16px;
     align-items: center;
@@ -122,12 +144,12 @@
 
 /* Desktop (>=1120px) */
 @media (min-width: 1120px) {
-  .services_brands__title {
+  .services_types__title {
     padding-left: 16px;
     height: 56px;
   }
 
-  .services_brands__items {
+  .services_types__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
@@ -136,11 +158,11 @@
     transition: max-height 0.3s ease;
   }
 
-  .services_brands__items--expanded {
+  .services_types__items--expanded {
     max-height: none;
   }
 
-  .services_brands__toggle {
+  .services_types__toggle {
     display: flex;
     margin-top: 16px;
     align-items: center;
@@ -156,55 +178,18 @@
   }
 }
 
-/* ================== SERVICES ================== */
-
-.services_brands__item {
-  border-radius: 8px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.services_brands__brand {
-  width: 240px;
-  height: 72px;
-  background-color: $color-pure-white;
-  border: 1px solid $color-pale-gray;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.services_brands__logo {
-  max-height: 40px;
-  max-width: 100px;
-  object-fit: contain;
-}
-
-.services_brands__arrow {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
-.services_brands__icon--collapse {
+.services_types__icon--collapse {
   display: none;
 }
 
-.services_brands__toggle--expanded .services__icon--expand {
+.services_types__toggle--expanded .services__icon--expand {
   display: none;
 }
 
-.services_brands__toggle--expanded .services__icon--collapse {
+.services_types__toggle--expanded .services__icon--collapse {
   display: inline;
 }
 
-.services_brands__items--expanded .services__item--hidden {
+.services_types__items--expanded .services__item--hidden {
   display: flex;
 }
