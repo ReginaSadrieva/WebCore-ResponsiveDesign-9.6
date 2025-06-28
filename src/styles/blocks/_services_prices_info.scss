@@ -25,6 +25,14 @@
 
 .services_prices__offer-icon {
   margin-left: 8px;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 27.49px;
+}
+
+/* Tablet and Desktop text <br> */
+.desktop-break {
+  display: inline;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
