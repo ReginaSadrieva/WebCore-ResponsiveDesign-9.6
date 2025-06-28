@@ -18,21 +18,21 @@
       box-sizing: border-box;
       width: 100%;
       position: relative;
-    }
 
-    .services_prices__title::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background-color: $color-aqua-green;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $color-aqua-green;
+      }
     }
   }
 
   &__container {
-    padding: 24px 0; /* Тот же отступ, как у services_types */
+    padding: 24px 0;
   }
 
   &__table {
@@ -47,11 +47,11 @@
 
   &__header-cell {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: $color-medium-gray;
-    text-align: center;
+    text-align: left;
     padding: 8px;
-    border-bottom: 1px solid $color-pale-gray; /* Серые линии */
+    border-bottom: 1px solid $color-pale-gray;
   }
 
   &__items {
@@ -59,13 +59,13 @@
   }
 
   &__row {
-    border-bottom: 1px solid $color-pale-gray; /* Серые горизонтальные линии */
+    border-bottom: 1px solid $color-pale-gray;
   }
 
   &__cell {
     padding: 8px;
-    text-align: center;
-    border: 1px solid $color-pale-gray;
+    text-align: left;
+    background-color: $color-pure-white;
   }
 
   &__cell--service {
@@ -73,20 +73,23 @@
   }
 
   &__cell--price {
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 400;
   }
 
   &__cell--term {
-    color: $color-medium-gray;
+    font-size: 14px;
+    color: $color-dark-charcoal;
   }
 
   &__order {
     width: 119px;
     height: 32px;
-    background-color: #FF69B4; /* Розовый цвет */
+    font-weight: 700;
+    background-color: $color-vivid-pink;
     color: $color-pure-white;
     border: none;
-    border-radius: 16px; /* Скругленные края */
+    border-radius: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -110,59 +113,98 @@
   }
 
   &__mobile-item {
-    width: 240px;
+    width: 260px;
+    height: 200px;
     flex-shrink: 0;
+    overflow: hidden;
   }
 
   &__mobile-row {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
     padding: 16px;
     background-color: $color-pure-white;
     border: 1px solid $color-pale-gray;
     border-radius: 8px;
+    align-items: flex-start;
+    height: 100%;
+    box-sizing: border-box;
+    flex-grow: 0;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    position: relative;
   }
 
   &__mobile-cell {
     width: 100%;
     text-align: left;
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+    flex-direction: column;
+
+    .services_prices__label {
+      margin-bottom: 4px;
+    }
   }
 
-  &__mobile-cell--service::before {
-    content: "Ремонтные услуги: ";
-    font-weight: 600;
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
     color: $color-medium-gray;
+    white-space: nowrap;
+    margin-right: 8px;
   }
 
-  &__mobile-cell--price::before {
-    content: "Цена: ";
-    font-weight: 600;
-    color: $color-medium-gray;
-  }
-
-  &__mobile-cell--term::before {
-    content: "Срок: ";
-    font-weight: 600;
-    color: $color-medium-gray;
+  &__data {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-dark-charcoal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
   }
 }
 
-/* Media Queries */
+/* ================== MEDIA QUERIES ================== */
+/* Mobile (<767px) */
 @media (max-width: 767px) {
   .services_prices__table {
-    display: none; /* Скрываем таблицу на мобильных */
+    display: none;
   }
 
   .services_prices__mobile-list {
-    display: block; /* Показываем Swiper на мобильных */
+    display: block;
+  }
+  .services_prices__mobile-row {
+    position: relative;
   }
 
   .services_prices__order {
-    width: 100%;
-    align-self: flex-end; /* Кнопка справа на уровне "Срок" */
+    width: 119px;
+    height: 32px;
+    background-color: $color-vivid-pink;
+    color: $color-pure-white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
   }
 
   .swiper-pagination {
@@ -176,7 +218,7 @@
 
 @media (min-width: 768px) {
   .services_prices__mobile-list {
-    display: none; /* Скрываем Swiper на планшете и десктопе */
+    display: none;
   }
 
   .services_prices__items {
