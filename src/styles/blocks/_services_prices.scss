@@ -1,0 +1,196 @@
+.services_prices {
+  &__header {
+    background: linear-gradient(to right, $color-off-white, $color-pure-white);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    .services_prices__title {
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-medium-gray;
+      padding: 0 16px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      height: 80px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      width: 100%;
+      position: relative;
+    }
+
+    .services_prices__title::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color-aqua-green;
+    }
+  }
+
+  &__container {
+    padding: 24px 0; /* Тот же отступ, как у services_types */
+  }
+
+  &__list {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__headers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок: 4 заголовка + 1 пустая */
+    gap: 16px;
+    padding: 0 0 16px 0; /* Отступ снизу перед таблицей */
+    margin-bottom: 0;
+  }
+
+  &__header-cell {
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-medium-gray;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок: 4 данных + 1 кнопка */
+    gap: 16px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    width: 240px;
+    height: auto; /* Адаптивная высота */
+    border: 1px solid $color-pale-gray;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-bottom: 1px solid $color-pale-gray; /* Серые горизонтальные линии */
+  }
+
+  &__cell {
+    padding: 8px;
+    text-align: center;
+    flex: 1;
+    white-space: normal; /* Разрешаем перенос текста */
+  }
+
+  &__cell--service {
+    font-size: 14px;
+  }
+
+  &__cell--price {
+    font-weight: bold;
+  }
+
+  &__cell--term {
+    color: $color-medium-gray;
+  }
+
+  &__order {
+    width: 119px;
+    height: 32px;
+    background-color: $color-aqua-green;
+    color: $color-pure-white;
+    border: none;
+    border-radius: 16px; /* Скругленные края */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  &__order-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .services_prices__headers {
+    display: none; /* Скрываем заголовки на мобильных */
+  }
+
+  .services_prices__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+    max-height: none;
+  }
+
+  .services_prices__item {
+    flex: 0 0 auto;
+    width: 240px;
+  }
+
+  .services_prices__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-bottom: none; /* Линии убираем на мобильных */
+  }
+
+  .services_prices__cell {
+    width: 100%;
+    text-align: left;
+  }
+
+  .services_prices__order {
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    display: block;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .services_prices__items {
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки на планшете */
+    max-height: none; /* Отображаем все ряды */
+    overflow: visible; /* Убираем ограничение высоты */
+  }
+
+  .services_prices__cell--service {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services_prices__row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .services_prices__items {
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок на десктопе */
+    max-height: none; /* Отображаем все ряды */
+    overflow: visible; /* Убираем ограничение высоты */
+  }
+}
