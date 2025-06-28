@@ -2,7 +2,7 @@ let swiperInstance = null;
 
 function initSwiper() {
   if (window.innerWidth < 768 && !swiperInstance) {
-    swiperInstance = new Swiper(".services_prices__list", {
+    swiperInstance = new Swiper(".services_prices__mobile-list", {
       slidesPerView: "auto",
       spaceBetween: 16,
       pagination: {

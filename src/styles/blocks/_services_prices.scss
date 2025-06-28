@@ -35,17 +35,14 @@
     padding: 24px 0; /* Тот же отступ, как у services_types */
   }
 
-  &__list {
-    overflow: hidden;
-    position: relative;
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
   }
 
   &__headers {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 колонок: 4 заголовка + 1 пустая */
-    gap: 16px;
-    padding: 0 0 16px 0; /* Отступ снизу перед таблицей */
-    margin-bottom: 0;
+    background-color: $color-off-white;
   }
 
   &__header-cell {
@@ -53,40 +50,22 @@
     font-weight: 600;
     color: $color-medium-gray;
     text-align: center;
-    padding: 8px 0;
+    padding: 8px;
+    border-bottom: 1px solid $color-pale-gray; /* Серые линии */
   }
 
   &__items {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 колонок: 4 данных + 1 кнопка */
-    gap: 16px;
     width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  &__item {
-    width: 240px;
-    height: auto; /* Адаптивная высота */
-    border: 1px solid $color-pale-gray;
-    border-radius: 8px;
-    box-sizing: border-box;
   }
 
   &__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
     border-bottom: 1px solid $color-pale-gray; /* Серые горизонтальные линии */
   }
 
   &__cell {
     padding: 8px;
     text-align: center;
-    flex: 1;
-    white-space: normal; /* Разрешаем перенос текста */
+    border: 1px solid $color-pale-gray;
   }
 
   &__cell--service {
@@ -104,7 +83,7 @@
   &__order {
     width: 119px;
     height: 32px;
-    background-color: $color-aqua-green;
+    background-color: #FF69B4; /* Розовый цвет */
     color: $color-pure-white;
     border: none;
     border-radius: 16px; /* Скругленные края */
@@ -120,41 +99,70 @@
     width: 16px;
     height: 16px;
   }
+
+  &__mobile-list {
+    display: none;
+  }
+
+  &__mobile-items {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__mobile-item {
+    width: 240px;
+    flex-shrink: 0;
+  }
+
+  &__mobile-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background-color: $color-pure-white;
+    border: 1px solid $color-pale-gray;
+    border-radius: 8px;
+  }
+
+  &__mobile-cell {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__mobile-cell--service::before {
+    content: "Ремонтные услуги: ";
+    font-weight: 600;
+    color: $color-medium-gray;
+  }
+
+  &__mobile-cell--price::before {
+    content: "Цена: ";
+    font-weight: 600;
+    color: $color-medium-gray;
+  }
+
+  &__mobile-cell--term::before {
+    content: "Срок: ";
+    font-weight: 600;
+    color: $color-medium-gray;
+  }
 }
 
 /* Media Queries */
 @media (max-width: 767px) {
-  .services_prices__headers {
-    display: none; /* Скрываем заголовки на мобильных */
+  .services_prices__table {
+    display: none; /* Скрываем таблицу на мобильных */
   }
 
-  .services_prices__items {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-bottom: 16px;
-    max-height: none;
-  }
-
-  .services_prices__item {
-    flex: 0 0 auto;
-    width: 240px;
-  }
-
-  .services_prices__row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    border-bottom: none; /* Линии убираем на мобильных */
-  }
-
-  .services_prices__cell {
-    width: 100%;
-    text-align: left;
+  .services_prices__mobile-list {
+    display: block; /* Показываем Swiper на мобильных */
   }
 
   .services_prices__order {
     width: 100%;
+    align-self: flex-end; /* Кнопка справа на уровне "Срок" */
   }
 
   .swiper-pagination {
@@ -162,35 +170,16 @@
     text-align: center;
     position: relative;
     bottom: 0;
+    margin-top: 16px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1119px) {
+@media (min-width: 768px) {
+  .services_prices__mobile-list {
+    display: none; /* Скрываем Swiper на планшете и десктопе */
+  }
+
   .services_prices__items {
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки на планшете */
-    max-height: none; /* Отображаем все ряды */
-    overflow: visible; /* Убираем ограничение высоты */
-  }
-
-  .services_prices__cell--service {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .services_prices__row {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .swiper-pagination {
-    display: none;
-  }
-}
-
-@media (min-width: 1120px) {
-  .services_prices__items {
-    grid-template-columns: repeat(5, 1fr); /* 5 колонок на десктопе */
-    max-height: none; /* Отображаем все ряды */
-    overflow: visible; /* Убираем ограничение высоты */
+    display: table-row-group;
   }
 }
