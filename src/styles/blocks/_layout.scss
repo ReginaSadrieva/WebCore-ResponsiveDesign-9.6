@@ -6,7 +6,6 @@
 
 .services {
   flex: 1;
-  //padding: 5px;
 }
 
 .services_brands {
@@ -20,11 +19,20 @@
   padding: 16px 0px;
 }
 
+.services_prices__info {
+  padding: 16px 0px;
+}
+
+.services__footer {
+  padding: 16px 0px;
+}
+
 /* ================== MEDIA QUERIES ================== */
 /* Mobile (<767px) */
 @media (max-width: 767px) {
   .layout {
     display: block;
+    margin:10px;
   }
 }
 

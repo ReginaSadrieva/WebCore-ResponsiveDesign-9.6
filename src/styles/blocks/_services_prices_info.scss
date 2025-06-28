@@ -1,0 +1,30 @@
+.services_prices__info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.services_prices__info-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-medium-gray;
+  margin: 0 0 10px 0;
+}
+
+.services_prices__offer {
+  display: inline-flex;
+  align-items: center;
+}
+
+.services_prices__offer-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-dark-charcoal;
+}
+
+.services_prices__offer-icon {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+}
