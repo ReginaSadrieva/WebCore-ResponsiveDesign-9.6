@@ -24,4 +24,5 @@ Let all barriers fall.
 Let harvest come.  
 Let the craft become mine.
 
-Unseal the code `index.html`
+Unseal the code `index.html` 
+https://reginasadrieva.github.io/WebCore-ResponsiveDesign-9.6/
